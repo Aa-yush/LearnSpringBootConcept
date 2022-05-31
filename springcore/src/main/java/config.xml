@@ -8,8 +8,22 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
 
+
+<bean class="com.mavendemo.springcore.Address" name="address1" >
+<property name="addressFlatNumber" value="155" />
+<property name="addressStreat" value="Streat Number 1"></property>
+<property name="addressCity" value="New Delhi" />
+</bean>
+
 <bean class="com.mavendemo.springcore.Student" name="student1">
- <property name="studentId">
+
+<property name="studentId" value="1233" />
+<property name="address">
+<ref bean="address1" />
+</property>
+
+
+<!--  <property name="studentId">
 	<value>1234</value>
 </property>
 
@@ -32,7 +46,7 @@
 	<entry key="Java" value="2 years 1months"/>
 	<entry key="Python" value="1 years 2months"/>
 	</map>
- </property>
+ </property> -->
 
 </bean>
 

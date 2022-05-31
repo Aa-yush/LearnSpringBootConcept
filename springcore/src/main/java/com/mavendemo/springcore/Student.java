@@ -1,14 +1,8 @@
 package com.mavendemo.springcore;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
 public class Student {
 	private int studentId;
-	private List<String> studentPhone;
-	private Set<String> studentName;
-	private Map<String, String> studentCourses;
+	private Address address;
 
 	public int getStudentId() {
 		return studentId;
@@ -18,37 +12,18 @@ public class Student {
 		this.studentId = studentId;
 	}
 
-	public List<String> getStudentPhone() {
-		return studentPhone;
+	public Address getAddress() {
+		return address;
 	}
 
-	public void setStudentPhone(List<String> studentPhone) {
-		this.studentPhone = studentPhone;
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 
-	public Set<String> getStudentName() {
-		return studentName;
-	}
-
-	public void setStudentName(Set<String> studentName) {
-		this.studentName = studentName;
-	}
-
-	public Map<String, String> getStudentCourses() {
-		return studentCourses;
-	}
-
-	public void setStudentCourses(Map<String, String> studentCourses) {
-		this.studentCourses = studentCourses;
-	}
-
-	public Student(int studentId, List<String> studentPhone, Set<String> studentName,
-			Map<String, String> studentCourses) {
+	public Student(int studentId, Address address) {
 		super();
 		this.studentId = studentId;
-		this.studentPhone = studentPhone;
-		this.studentName = studentName;
-		this.studentCourses = studentCourses;
+		this.address = address;
 	}
 
 	public Student() {
@@ -58,8 +33,7 @@ public class Student {
 
 	@Override
 	public String toString() {
-		return "Student [studentId=" + studentId + ", studentPhone=" + studentPhone + ", studentName=" + studentName
-				+ ", studentCourses=" + studentCourses + "]";
+		return "Student [studentId=" + studentId + ", address=" + address + "]";
 	}
 
 }
